@@ -11,7 +11,8 @@
  */
 
 
-export interface SampleForm { 
+export interface Sample { 
+    id?: number;
     string?: string;
 }
 

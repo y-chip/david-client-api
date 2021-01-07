@@ -17,7 +17,7 @@ import { HttpClient, HttpHeaders, HttpParams,
 import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
-import { SampleForm } from '../model/models';
+import { Sample } from '../model/models';
 
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
@@ -88,9 +88,9 @@ export class SampleFormControllerService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public get(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<SampleForm>;
-    public get(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpResponse<SampleForm>>;
-    public get(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpEvent<SampleForm>>;
+    public get(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<Sample>;
+    public get(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpResponse<Sample>>;
+    public get(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpEvent<Sample>>;
     public get(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*'}): Observable<any> {
 
         let headers = this.defaultHeaders;
@@ -113,7 +113,7 @@ export class SampleFormControllerService {
             responseType = 'text';
         }
 
-        return this.httpClient.get<SampleForm>(`${this.configuration.basePath}/sample-form`,
+        return this.httpClient.get<Sample>(`${this.configuration.basePath}/sample-form`,
             {
                 responseType: <any>responseType,
                 withCredentials: this.configuration.withCredentials,
@@ -125,16 +125,16 @@ export class SampleFormControllerService {
     }
 
     /**
-     * @param sampleForm 
+     * @param sample 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public post(sampleForm: SampleForm, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<SampleForm>;
-    public post(sampleForm: SampleForm, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpResponse<SampleForm>>;
-    public post(sampleForm: SampleForm, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpEvent<SampleForm>>;
-    public post(sampleForm: SampleForm, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*'}): Observable<any> {
-        if (sampleForm === null || sampleForm === undefined) {
-            throw new Error('Required parameter sampleForm was null or undefined when calling post.');
+    public save(sample: Sample, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<Sample>;
+    public save(sample: Sample, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpResponse<Sample>>;
+    public save(sample: Sample, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpEvent<Sample>>;
+    public save(sample: Sample, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*'}): Observable<any> {
+        if (sample === null || sample === undefined) {
+            throw new Error('Required parameter sample was null or undefined when calling save.');
         }
 
         let headers = this.defaultHeaders;
@@ -166,8 +166,8 @@ export class SampleFormControllerService {
             responseType = 'text';
         }
 
-        return this.httpClient.post<SampleForm>(`${this.configuration.basePath}/sample-form`,
-            sampleForm,
+        return this.httpClient.post<Sample>(`${this.configuration.basePath}/sample-form`,
+            sample,
             {
                 responseType: <any>responseType,
                 withCredentials: this.configuration.withCredentials,
