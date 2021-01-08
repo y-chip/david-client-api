@@ -63,6 +63,10 @@
     "components": {
         "schemas": {
             "Sample": {
+                "required": [
+                    "id",
+                    "string"
+                ],
                 "type": "object",
                 "properties": {
                     "id": {

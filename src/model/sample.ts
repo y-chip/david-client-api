@@ -12,7 +12,7 @@
 
 
 export interface Sample { 
-    id?: number;
-    string?: string;
+    id: number;
+    string: string;
 }
 
