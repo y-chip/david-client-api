@@ -65,7 +65,9 @@
             "Sample": {
                 "required": [
                     "id",
-                    "string"
+                    "longText",
+                    "number",
+                    "text"
                 ],
                 "type": "object",
                 "properties": {
@@ -74,8 +76,17 @@
                         "format": "int32",
                         "nullable": true
                     },
-                    "string": {
+                    "text": {
                         "type": "string",
+                        "nullable": true
+                    },
+                    "longText": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "number": {
+                        "type": "integer",
+                        "format": "int32",
                         "nullable": true
                     }
                 }

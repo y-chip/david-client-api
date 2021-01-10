@@ -13,6 +13,8 @@
 
 export interface Sample { 
     id: number | null;
-    string: string | null;
+    text: string | null;
+    longText: string | null;
+    number: number | null;
 }
 
