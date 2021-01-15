@@ -9,6 +9,7 @@ git_push.sh
 index.ts
 model/models.ts
 model/sample.ts
+model/validationError.ts
 ng-package.json
 package.json
 tsconfig.json
