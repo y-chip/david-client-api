@@ -12,7 +12,7 @@
 
 
 export interface ValidationError { 
-    field?: string;
-    message?: string;
+    field: string | null;
+    message: string | null;
 }
 

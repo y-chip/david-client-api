@@ -83,13 +83,19 @@
     "components": {
         "schemas": {
             "ValidationError": {
+                "required": [
+                    "field",
+                    "message"
+                ],
                 "type": "object",
                 "properties": {
                     "field": {
-                        "type": "string"
+                        "type": "string",
+                        "nullable": true
                     },
                     "message": {
-                        "type": "string"
+                        "type": "string",
+                        "nullable": true
                     }
                 }
             },
