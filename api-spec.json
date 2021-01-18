@@ -101,6 +101,7 @@
             },
             "Sample": {
                 "required": [
+                    "bool",
                     "id",
                     "longText",
                     "number",
@@ -124,6 +125,10 @@
                     "number": {
                         "type": "integer",
                         "format": "int32",
+                        "nullable": true
+                    },
+                    "bool": {
+                        "type": "boolean",
                         "nullable": true
                     }
                 }

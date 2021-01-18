@@ -16,5 +16,6 @@ export interface Sample {
     text: string | null;
     longText: string | null;
     number: number | null;
+    bool: boolean | null;
 }
 
