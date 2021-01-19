@@ -17,6 +17,6 @@ export interface Sample {
     longText: string | null;
     number: number | null;
     bool: boolean | null;
-    dateVal: string | null;
+    dateVal: Date | null;
 }
 

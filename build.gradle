@@ -19,4 +19,5 @@ openApiGenerate {
 			ngVersion: "11.0.4",
 			providedInRoot: "true"
 	]
+	typeMappings = ["DateTime": "Date"]
 }
