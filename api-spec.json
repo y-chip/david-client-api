@@ -78,6 +78,39 @@
                     }
                 }
             }
+        },
+        "/master": {
+            "get": {
+                "tags": [
+                    "master-controller"
+                ],
+                "operationId": "get_1",
+                "responses": {
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValidationError"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Master"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     },
     "components": {
@@ -135,6 +168,24 @@
                     "dateVal": {
                         "type": "string",
                         "format": "date-time",
+                        "nullable": true
+                    }
+                }
+            },
+            "Master": {
+                "required": [
+                    "code",
+                    "text"
+                ],
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "text": {
+                        "type": "string",
                         "nullable": true
                     }
                 }

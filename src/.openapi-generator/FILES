@@ -2,11 +2,13 @@
 README.md
 api.module.ts
 api/api.ts
+api/masterController.service.ts
 api/sampleFormController.service.ts
 configuration.ts
 encoder.ts
 git_push.sh
 index.ts
+model/master.ts
 model/models.ts
 model/sample.ts
 model/validationError.ts
