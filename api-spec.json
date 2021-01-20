@@ -139,6 +139,7 @@
                     "id",
                     "longText",
                     "number",
+                    "selectVal",
                     "text"
                 ],
                 "type": "object",
@@ -168,6 +169,11 @@
                     "dateVal": {
                         "type": "string",
                         "format": "date-time",
+                        "nullable": true
+                    },
+                    "selectVal": {
+                        "type": "integer",
+                        "format": "int32",
                         "nullable": true
                     }
                 }

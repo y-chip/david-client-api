@@ -18,5 +18,6 @@ export interface Sample {
     number: number | null;
     bool: boolean | null;
     dateVal: Date | null;
+    selectVal: number | null;
 }
 
