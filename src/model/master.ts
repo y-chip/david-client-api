@@ -13,6 +13,6 @@
 
 export interface Master { 
     code: number | null;
-    text: string | null;
+    name: string | null;
 }
 

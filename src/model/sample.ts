@@ -13,11 +13,11 @@
 
 export interface Sample { 
     id: number | null;
-    text: string | null;
-    longText: string | null;
-    number: number | null;
-    bool: boolean | null;
-    dateVal: Date | null;
-    selectVal: number | null;
+    fieldText: string | null;
+    fieldTextarea: string | null;
+    fieldNumber: number | null;
+    fieldSwitch: boolean | null;
+    fieldDate: Date | null;
+    fieldSelect: number | null;
 }
 

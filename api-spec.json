@@ -134,13 +134,13 @@
             },
             "Sample": {
                 "required": [
-                    "bool",
-                    "dateVal",
-                    "id",
-                    "longText",
-                    "number",
-                    "selectVal",
-                    "text"
+                    "fieldDate",
+                    "fieldNumber",
+                    "fieldSelect",
+                    "fieldSwitch",
+                    "fieldText",
+                    "fieldTextarea",
+                    "id"
                 ],
                 "type": "object",
                 "properties": {
@@ -149,29 +149,29 @@
                         "format": "int32",
                         "nullable": true
                     },
-                    "text": {
+                    "fieldText": {
                         "type": "string",
                         "nullable": true
                     },
-                    "longText": {
+                    "fieldTextarea": {
                         "type": "string",
                         "nullable": true
                     },
-                    "number": {
+                    "fieldNumber": {
                         "type": "integer",
                         "format": "int32",
                         "nullable": true
                     },
-                    "bool": {
+                    "fieldSwitch": {
                         "type": "boolean",
                         "nullable": true
                     },
-                    "dateVal": {
+                    "fieldDate": {
                         "type": "string",
                         "format": "date-time",
                         "nullable": true
                     },
-                    "selectVal": {
+                    "fieldSelect": {
                         "type": "integer",
                         "format": "int32",
                         "nullable": true
@@ -181,7 +181,7 @@
             "Master": {
                 "required": [
                     "code",
-                    "text"
+                    "name"
                 ],
                 "type": "object",
                 "properties": {
@@ -190,7 +190,7 @@
                         "format": "int32",
                         "nullable": true
                     },
-                    "text": {
+                    "name": {
                         "type": "string",
                         "nullable": true
                     }
