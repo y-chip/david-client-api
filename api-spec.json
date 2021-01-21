@@ -136,6 +136,7 @@
                 "required": [
                     "fieldDate",
                     "fieldNumber",
+                    "fieldRadio",
                     "fieldSelect",
                     "fieldSwitch",
                     "fieldText",
@@ -172,6 +173,11 @@
                         "nullable": true
                     },
                     "fieldSelect": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "fieldRadio": {
                         "type": "integer",
                         "format": "int32",
                         "nullable": true

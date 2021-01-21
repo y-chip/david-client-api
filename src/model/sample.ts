@@ -19,5 +19,6 @@ export interface Sample {
     fieldSwitch: boolean | null;
     fieldDate: Date | null;
     fieldSelect: number | null;
+    fieldRadio: number | null;
 }
 
